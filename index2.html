@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>2나만의 동기부여 홈화면 만들기🎯
+        -> 요기가 윗부분입니당
+    </title>
+
+    <script src="index2.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }       
+        
+        .test {
+            font-size: 30px;
+        }
+
+
+        /* 모멘텀 화면을 꾸미기 위해서는 이미지 주소를 받아와야 한다!
+        원하는 이미지에 오른쪽 마우스 클릭- 이미지 주소 복사 */
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/13/00/48/wall-3315327_960_720.jpg");
+            /* 이미지를 가운데로 해주려면 */
+            background-position: center;
+
+            /* css에서 화면의 최상위 위계에 있는 친구들은 
+            전부 아래 친구들도 적용해라 라는 속성도 가지고 있어서*/
+            color: white;
+            /* 그니까 상위 위계
+            맨 위에 있는 친구에게 속성을 먹여주면,
+            그 안쪽에 있는 html 뼈대들도 전부 적용이 된다는 점! */
+        }
+
+        .time {
+            font-size: 80px;
+            font-weight: bold;
+            /* 굵게하는 것은 웨이트 사용해서! 볼드주기!! */
+        }
+
+        .greeting { 
+            font-size: 50px;
+        }
+
+        .todo {
+            font-size: 30px;
+        }
+
+        .author { 
+            font-size: 25px;
+            font-style: italic;
+            /* 이탤릭 = 기울어진 글씨체 */
+        }
+
+        .main { 
+            width: 100vw;
+            /* 화면을 꽉 차게 사용하는 코드임! */
+
+            height: 80vh;
+            /* 하이트는 화면의 80퍼센트만 사용하는 vh로 작성! */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* 이 네 개의 코드는 어렵게 생각하지 말고
+            화면을 가운데로 묶어주는 묶음 코드라고 생각하면 된다. */
+        }
+
+        .quote {
+            width: 100vw;
+            
+            height: 20vh;
+            /* 메인에서 80vh로 사용했으니깐, 여기는 20퍼센트로 맞춰주기!! */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* 이 네 개의 코드는 어렵게 생각하지 말고
+            화면을 가운데로 묶어주는 묶음 코드라고 생각하면 된다. */
+
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+
+<body>
+<!-- 구글 "모멘텀 만들기!" -->
+    <!-- 구역을 나눠주기 위해서 div태그 안에 또 div태그 넣어주기! -->
+    <div class="main">
+        <div id="time" class="time">12:00</div>
+        <div class="greeting">Hello, Subin</div>
+        <div class="todo">수영가기</div>
+    </div>
+    <div class="quote">
+        <div id="author" class="author"> - 명언의 저자(어써) - </div>
+        <div id="content" class="content">" 명언의 내용 " </div>
+        <!-- ctrl + r 이 새로고침 단축키임!(우왕 새로고침 할 때마다 명언이 달라짐~대박대박ㅎㅎ) -->
+    </div>
+</body>
+
+</html>
